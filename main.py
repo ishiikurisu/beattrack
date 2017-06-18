@@ -13,4 +13,5 @@ if __name__ == '__main__':
         fs, song = beat.load(wave_file)
         # TODO Plot song
         beat.plot(fs, song)
+        # TODO Plot song envelope
         # TODO Discover song tempo

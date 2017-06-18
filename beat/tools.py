@@ -2,10 +2,11 @@ import wave
 import numpy
 import matplotlib.pyplot
 import scipy.io.wavfile
+import scipy.signal
 
 def load(filename):
     fs, wave = scipy.io.wavfile.read(filename)
-    return fs, wave
+    return fs/100, scipy.signal.resample(wave, numpy.floor(len(wave)/100))
 
 
 def plot(fs, song):
