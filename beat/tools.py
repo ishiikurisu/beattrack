@@ -13,3 +13,6 @@ def plot(fs, song):
     time = numpy.arange(0, len(song)/fs, 1/fs)
     matplotlib.pyplot.plot(time, song)
     matplotlib.pyplot.show()
+
+def envelope(song):
+    return numpy.absolute(scipy.signal.hilbert(song))
